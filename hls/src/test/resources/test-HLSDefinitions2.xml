@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="hls-extm3u">
+    <tag name="extM3u" value="#EXTM3U"/>
+    <tag name="extInf" value="#EXTINF"/>
+    <tag name="extVersion" value="#EXT-X-VERSION"/>
+    <tag name="extByteRange" value="#EXT-X-BYTERANGE"/>
+    <tag name="extTargetDuration" value="#EXT-X-TARGETDURATION"/>
+    <tag name="extMediaSequence" value="#EXT-X-MEDIA-SEQUENCE"/>
+    <tag name="extKey" value="#EXT-X-KEY">
+        <attr name="method" value="METHOD">
+            <option name="none" value="NONE"/>
+            <option name="aes128" value="AES-128"/>
+        </attr>
+        <attr name="uri" value="URI"/>
+    </tag>
+    <tag name="extProgramDatetime" value="#EXT-X-PROGRAM-DATE-TIME"/>
+    <tag name="extAllowCache" value="#EXT-X-ALLOW-CACHE">
+        <option name="yes" value="YES"/>
+        <option name="no" value="NO"/>
+    </tag>
+    <tag name="extPlayListType" value="#EXT-X-ALLOW-CACHE">
+        <option name="vod" value="VOD"/>
+        <option name="event" value="EVENT"/>
+    </tag>
+    <tag name="extEndList" value="#EXT-X-ENDLIST"/>
+    <tag name="extMedia" value="#EXT-X-MEDIA">
+        <attr name="uri" value="URI"/>
+        <attr name="type" value="TYPE"/>
+        <attr name="groupId" value="GROUP-ID"/>
+        <attr name="language" value="LANGUAGE"/>
+        <attr name="name" value="NAME"/>
+        <attr name="default" value="DEFAULT">
+            <option name="yes" value="YES"/>
+            <option name="no" value="NO"/>
+        </attr>
+        <attr name="autoselect" value="AUTOSELECT">
+            <option name="yes" value="YES"/>
+            <option name="no" value="NO"/>
+        </attr>
+    </tag>
+    <tag name="extStreamInf" value="#EXT-X-STREAM-INF">
+        <attr name="bandwith" value="BANDWITH"/>
+        <attr name="programId" value="PROGRAM-ID"/>
+        <attr name="codecs" value="CODECS"/>
+        <attr name="resolution" value="RESOLUTION"/>
+        <attr name="audio" value="AUDIO"/>
+        <attr name="video" value="VIDEO"/>
+    </tag>
+    <tag name="extDiscontinuity" value="#EXT-X-DISCONTINUITY"/>
+    <tag name="extIFramesOnly" value="#EXT-X-I-FRAMES-ONLY"/>
+    <tag name="extIFrameStreamInf" value="#EXT-X-I-FRAME-STREAM-INF" extend="extStreamInf">
+        <attr name="uri" value="URI"/>
+    </tag>
+    <tag name="extSignalReplace" value="#EXT-X-BLACKOUT-SPAN">
+        <attr name="signalId" value="Signal-ID"/>
+        <attr name="duration" value="duration"/>
+    </tag>
+    <tag name="extSignalExit" value="#EXT-X-SIGNAL-EXIT">
+        <attr name="signalId" value="signal-Id"/>
+        <attr name="duration" value="duration"/>
+    </tag>
+    <tag name="extSignalSpan" value="#EXT-X-SIGNAL-SPAN"/>
+    <tag name="extSignalReturn" value="#EXT-X-SIGNAL-RETURN"/>
+    <tag name="extTracking" value="#EXT-TRACKING"/>
+</definitions>

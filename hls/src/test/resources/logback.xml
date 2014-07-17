@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+
+    <!-- Log line pattern. -->
+    <property name="CONSOLE_LINE_PATTERN" value="%date{yyyyMMdd HH:mm:ss.SSS} %level [%class{10}.%method:%line] %message%n"/>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${CONSOLE_LINE_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.mds" additivity="false" level="INFO">
+        <appender-ref ref="console"/>
+    </logger>
+
+    <logger name="net.spy.memcached" additivity="false" level="WARN">
+        <appender-ref ref="console"/>
+    </logger>
+
+    <logger name="net.rubyeye.xmemcached" additivity="false" level="ERROR">
+        <appender-ref ref="console"/>
+    </logger>
+
+    <root level="WARN">
+        <appender-ref ref="console"/>
+    </root>
+</configuration>
